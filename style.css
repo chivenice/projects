@@ -7,7 +7,8 @@
   left: 0;
 }
 .right {
-  background: url("/img/galaxy-space.gif") repeat;
+  /*background: url("/img/galaxy-space.gif") repeat;*/
+  background-color: antiquewhite;
   position: fixed;
   width: 50%;
   height: 100%;
@@ -17,10 +18,27 @@
 .nervous {
   background: url("/img/nervous.png") no-repeat 0 0;
   position: absolute;
-  bottom: 100px;
-  left: 100px;
+  bottom: 230px;
+  margin-left: -200px;
+  left: 50%;
   width: 223px;
   height: 100px;
+  display: none;
+}
+.nervous.show {
+  display: block;
+}
+.cant-wait {
+  background: url("/img/cant-wait.png") no-repeat 0 0;
+  position: absolute;
+  bottom: 300px;
+  left: 50%;
+  width: 223px;
+  height: 100px;
+  display: none;
+}
+.cant-wait.show {
+  display: block;
 }
 .ground {
   background: url("/img/ground.png") no-repeat;
