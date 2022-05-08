@@ -6,20 +6,28 @@ var changeState = function (state) {
   clearInterval(timer);
   countdownNumber = 10;
   document.getElementById("countdown").innerHTML = countdownNumber;
-
+  //countdown
   if (state == 2) {
     timer = setInterval(function () {
       countdownNumber = countdownNumber - 1;
+      document.getElementById("countdown").innerHTML = countdownNumber;
+      if (countdownNumber == 5) {
+        // nervous
+      }
+      if (countdownNumber == 3) {
+        //cant wait
+      }
+
       if (countdownNumber <= 0) {
         changeState(3);
       }
-    }, 500);
+    }, 700);
   } else if (state == 3) {
     var success = setTimeout(function () {
       var randomNumber = Math.round(Math.random() * 10);
       console.log("randomNumber:", randomNumber);
       //success
-      if (randomNumber > 5) {
+      if (randomNumber > 9) {
         changeState(4);
       } else {
         changeState(5); //oh no

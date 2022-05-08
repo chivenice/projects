@@ -7,19 +7,27 @@
   left: 0;
 }
 .right {
-  background: url("../rocket/img/galaxy-space.gif");
+  background: url("/img/galaxy-space.gif") repeat;
   position: fixed;
   width: 50%;
   height: 100%;
   top: 0;
   right: 0;
 }
+.nervous {
+  background: url("/img/nervous.png") no-repeat 0 0;
+  position: absolute;
+  bottom: 100px;
+  left: 100px;
+  width: 223px;
+  height: 100px;
+}
 .ground {
-  background: url("../rocket/img/ground.png");
+  background: url("/img/ground.png") no-repeat;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 20px;
+  height: 60px;
   position: absolute;
 }
 .rocket {
@@ -29,9 +37,25 @@
   bottom: 20px;
   width: 143px;
   height: 272px;
-  background: url("../rocket/img/rocket-state1.png") no-repeat 0 0;
-  transition: bottom 10000ms;
+  background: url("/img/rocket-state1.png") no-repeat 0 0;
+  transition: bottom 1000ms;
 }
+
+/*rocket bg img*/
+body.body-state2 .rocket {
+  background-image: url("/img/rocket-state2.gif");
+}
+body.body-state3 .rocket,
+body.body-state4 .rocket {
+  background-image: url("/img/rocket-state3.gif");
+}
+body.body-state5 .rocket {
+  background-image: url("/img/boom.png");
+  width: 209px;
+  height: 200px;
+  margin-left: -105px;
+}
+
 body.body-state3 .rocket,
 body.body-state4 .rocket {
   bottom: 1000px;
